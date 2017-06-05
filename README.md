@@ -10,13 +10,15 @@ as the basis for messages and methods.
 and **message contents**.
 * Supports self-signed or private-CA SSL certificates.
 
+This tool requires Java 8 to run.
+
 ## Quickstart
 
 Compile your `.proto` files with `protoc` the way you normally do, but with a couple of
 extra flags: `--descriptor_set_out=my_protos.pb  --include_imports --include_source_info` to produce
 a self-contained `FileDescriptorSet`.
 
-Download and unpack the repl tool:
+[Download v0.1](https://github.com/ModelBox/grpc-repl/releases/tag/0.1) and unpack the repl tool:
 
 ```sh
 unzip grpc-repl-0.1.zip
