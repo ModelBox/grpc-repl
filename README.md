@@ -90,3 +90,36 @@ rpc
     |   * rpc <method> <variable> <variable> .... - Call a client-streaming message
 
 ```
+
+```
+$ ./grpc-repl-0.1/bin/grpc-repl --help
+GRPC REPL tool
+
+Flags:
+
+-d, --descriptor /path/to/file_descriptor_set.pb
+    A path to the output from protoc --descriptor_set_out which contains a FileDescriptorSet.
+    You probably also want to call protoc with --include_imports and --include_source_info
+    to create a completely self-contained file.
+
+-h, --help
+    This message.
+
+-t, --target https://your.server
+    An https:// or http:// URI to specify the target server.  An alternate port may be specified.
+
+--trust /path/to/trusted_keys.jks
+    A path to a keystore file containing SSL certificates that should be trusted when connecting
+    to SSL servers using self-signed or private-CA certificates.
+
+    To create this file, use the java keytool command:
+      keytool -import \
+        -alias "development" \
+        -file PATH/TO/self_signed.crt \
+        -keystore trusted_keys.jks \
+
+    The alias used for the key doesn't matter, it just needs to be distinct within the store.
+
+--trustpasswd trustStorePassword
+    The password to use when reading the trust store.  If not specified, you will be prompted.
+```
