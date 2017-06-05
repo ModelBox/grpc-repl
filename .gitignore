@@ -1,0 +1,14 @@
+.idea
+*.iml
+*.ipr
+*.iws
+
+.gradle/
+build/
+target/
+out/
+
+hs_err*.log
+
+.DS_Store
+
